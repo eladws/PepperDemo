@@ -40,3 +40,8 @@ async def get_token():
 @app.get("/v1/tokens/{tokenId}")
 async def get_token():
     return {"SECRET_TOKEN_ID"}
+
+
+@app.get("/v2/phone/search")
+async def phone_search(phone):
+    return get_user_from_db_by_phone(phone)
